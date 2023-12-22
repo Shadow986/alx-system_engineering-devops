@@ -1,26 +1,10 @@
-/*
- * File_Name: 102-zombie.c
- * Created: 28th June, 2023
- * Author: David James Taiye (Official0mega)
- * Size_Of_File: Undefined
- * Project_Title: sorting_algorithms
- * Status: Submitted.!
- */
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
 
 /**
  * infinite_while - Initializes an infinite while loop.
- *
  * Return: Always returns 0.
- *
- * Description:
- * This function creates an infinite loop using a while statement.It repeatedly
- * calls the sleep() function to pause the execution for 1 second, allowing the
- * program to continue running indefinitely until interrupted by a signal. The
- * function returns 0 to indicate successful execution.
  */
 int infinite_while(void)
 {
