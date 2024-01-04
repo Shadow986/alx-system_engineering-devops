@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Listens to the port of an IP address
+
+nc -l localhost 98
