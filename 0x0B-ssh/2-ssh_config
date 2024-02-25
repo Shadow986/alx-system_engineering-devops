@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script configures the SSH client
+
+# Configure the SSH client
+echo "Host *" > ~/.ssh/config
+echo "  IdentityFile ~/.ssh/school" >> ~/.ssh/config
+echo "  PasswordAuthentication no" >> ~/.ssh/config
+
+# Print a success message
+echo "SSH client is successfully configured to use the private key ~/.ssh/school and refuse to authenticate using a password."
