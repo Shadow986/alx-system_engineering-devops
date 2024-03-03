@@ -1,0 +1,17 @@
+#!/bin/bash
+telnet smtp.sendgrid.net 587 <<EOF
+EHLO ismtpd0013p1las1.sendgrid.net
+AUTH LOGIN
+VGhpcyBpcyBteSBsb2dpbg==
+WW91IHJlYWxseSB0aG91Z2h0IEkgd291bGQgbGV0IG15IHBhc3N3b3JkIGhlcmU/ISA6RA==
+MAIL FROM: sylvain@kalache.fr
+RCPT TO: julien@google.com
+DATA
+To: Julien
+From: Sylvain
+Subject: Hello from the insecure world
+
+I am sending you this email from a Terminal.
+.
+QUIT
+EOF
