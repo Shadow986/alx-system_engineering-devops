@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# Script to configure Nginx to listen on port 80
+
+# Check if Nginx is already running
+if sudo service nginx status | grep -q "active (running)"; then
+    echo "Nginx is already running."
+else
+    # Start Nginx
+    sudo service nginx start
+fi
+
+# Open port 80 (if using UFW)
+sudo ufw allow 80
+
+# Reload Nginx
+sudo service nginx reload
+
+# Verify Nginx is serving on port 80
+if curl 0:80 | grep -q "Welcome to nginx"; then
+    echo "Nginx is now listening on port 80."
+else
+    echo "Nginx configuration issue. Please check logs."
+fi
