@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Starts nginx and ensures it's not running after exit
+service nginx start
+service nginx stop
