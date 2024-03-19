@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# This script configures the container to run Nginx as the nginx user and listen on port 8080
+echo 'listen 8080 default_server;' > /etc/nginx/sites-available/default
+echo 'user nginx;' > /etc/nginx/nginx.conf
+service nginx restart
