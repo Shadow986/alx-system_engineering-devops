@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import requests
 from collections import Counter
 import re
