@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# This script displays information about subdomains
+
+# Function to display subdomain info
+display_info() {
+    local domain=$1
+    local subdomain=$2
+    local record=$(dig +short ${subdomain}.${domain} | awk 'NR==1{print $1}')
+    echo "The subdomain ${subdomain} is a A record and points to ${record}"
+}
+
+# Main script
+domain=$1
+subdomain=$2
+
+if [[ -z "${subdomain}" ]]; then
+    # Display info for default subdomains when no subdomain argument is provided
+    for sub in www lb-01 web-01 web-02; do
+        display_info ${domain} ${sub}
+    done
+else
+    # Display info for specified subdomain
+    display_info ${domain} ${subdomain}
+fi

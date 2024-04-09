@@ -1,0 +1,26 @@
+What Happens When You Type a URL into Your Browser and Press Enter?
+Have you ever wondered what happens when you type https://www.google.com into your browser and press enter? It seems simple, but behind the scenes, a complex process is taking place. Let’s break it down:
+
+DNS Request
+The first step is a Domain Name System (DNS) request. The browser needs to know the IP address of the server that hosts www.google.com. To find this, it makes a request to a DNS server, which returns the IP address.
+
+TCP/IP
+Next, the browser establishes a TCP/IP connection with the server. TCP/IP is the suite of protocols that the internet is built on. TCP (Transmission Control Protocol) handles the reliable transmission of data, while IP (Internet Protocol) deals with the routing of data.
+
+Firewall
+A firewall may be in place to protect the server from unauthorized access. It examines incoming traffic and uses predefined rules to allow or block packets.
+
+HTTPS/SSL
+The ‘https’ in the URL indicates that the connection should be secure. This is achieved using SSL (Secure Sockets Layer), which encrypts the data sent between the browser and the server. This ensures that sensitive information like passwords and credit card numbers can’t be intercepted.
+
+Load Balancer
+A load balancer may be used to distribute network traffic across multiple servers. This helps to ensure that no single server becomes a bottleneck, improving performance and reliability.
+
+Web Server
+The web server receives the request from the browser and fetches the requested webpage. If the page is static (i.e., the same for all users), the server simply returns the HTML file. If the page is dynamic, the server may need to run some server-side code to generate the HTML.
+
+Application Server
+An application server might be used to run the server-side code for dynamic webpages. This could be written in a variety of languages, including PHP, Python, Ruby, and Java.
+
+Database
+Finally, a database might be used to store and retrieve data needed by the server-side code. This could include user accounts, blog posts, comments, and more.
