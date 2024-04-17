@@ -1,0 +1,4 @@
+#!/user/bin/env bash
+# Gracefully realods Gunicorn
+
+pgrep gunicorn | xargs kill HUP
